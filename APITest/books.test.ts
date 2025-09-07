@@ -31,7 +31,7 @@ test('Should add a book (with cleanup)', async () => {
 
   const addResponse = await api.addBook(userId, testData.sampleIsbn, token);
   expect(addResponse.status()).toBe(201);
-  console.log('✅ Book added successfully:', await addResponse.json());
+  console.log('Book added successfully:', await addResponse.json());
 });
 
 test('Should delete a book from the existing list and log its details', async () => {
@@ -57,5 +57,5 @@ test('Should delete a book from the existing list and log its details', async ()
   // Step 4: Delete the book
   const deleteResponse = await api.deleteBook(userId, bookToUse.isbn, token);
   expect(deleteResponse.status()).toBe(204);
-  console.log(`🗑️ Book with ISBN '${bookToUse.isbn}' deleted successfully.`);
+  console.log(`Book with ISBN '${bookToUse.isbn}' deleted successfully.`);
 });

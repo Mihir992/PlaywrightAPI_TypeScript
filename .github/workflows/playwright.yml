@@ -1,4 +1,4 @@
-name: Playwright Ecomm Test
+name: Playwright API Test
 
 on:
   push:
