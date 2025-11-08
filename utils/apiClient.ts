@@ -16,7 +16,7 @@ export class APIClient {
 
   async login(userName: string, password: string) {
     const response = await this.requestContext.post('/Account/v1/Login', {
-      data: { userName: userName, password },
+      data: { userName, password },
     });
 
     console.log('Login response status:', response.status());
